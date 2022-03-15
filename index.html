@@ -1,0 +1,360 @@
+---
+title: An Impact Study of Program Data Shift Towards Code Analysis Model and Uncertainty Measurement
+layout: default
+---
+
+<h2 id="description">Description</h2>
+We systematically study the effect of three common real-world program data shifts on DL software performance.
+We also investigate the effectiveness of existing state-of-the-artuncertainty approaches on programming tasks under data shift and propose a large-scale benchmark for their performance.
+
+<br/>
+
+Illustration of three program data shifts:
+<img name="figure0" src="Figure/program_shift.png">
+
+Logical overview of our study:
+<p style="text-align:center;"><img name="figure0" src="Figure/study_overview.png" width="100%" height="100%">
+
+<br/>
+
+<h2 id="tables">Tables</h2>
+<p id="table1">Supplementary information about our three shifted datasets.</p>
+<label  for="table1">Table 1: Statistics of datasets under shift across different timelines.</label>
+<table  class="table table-bordered table-hover table-condensed" name="table1">
+    <thead><tr><th title="Field #1">Different Timelines</th>
+    <th title="Field #2">Training</th>
+    <th title="Field #3">Validation</th>
+    <th title="Field #4">Shift1</th>
+    <th title="Field #4">Shift2</th>
+    <th title="Field #4">Shift3</th>
+    </tr></thead>
+    <tbody><tr>
+    <td>#Files</td>
+    <td align="right">26436</td>
+    <td align="right">2538</td>
+    <td align="right">2538</td>
+    <td align="right">2538</td>
+    <td align="right">2538</td>
+    </tr>
+    </tr></thead>
+    <tr>
+    <td>#Instances (for CS)</td>
+    <td align="right">185557</td>
+    <td align="right">17598</td>
+    <td align="right">18226</td>
+    <td align="right">17855</td>
+    <td align="right">17296</td>
+    </tr>
+    <tr>
+    <td>#Tokens (for CS)</td>
+    <td align="right">193284</td>
+    <td align="right">193284</td>
+    <td align="right">193284</td>
+    <td align="right">193284</td>
+    <td align="right">193284</td>
+    </tr>
+    <tr>
+    <td>#Paths (for CS)</td>
+    <td align="right">702502</td>
+    <td align="right">702502</td>
+    <td align="right">702502</td>
+    <td align="right">702502</td>
+    <td align="right">702502</td>
+    </tr>
+    <tr>
+    <td>#Functions (for CS)</td>
+    <td align="right">10737</td>
+    <td align="right">10737</td>
+    <td align="right">10737</td>
+    <td align="right">10737</td>
+    <td align="right">10737</td>
+    </tr>
+    <tr>
+    <td>#Instances (for CC)</td>
+    <td align="right">8679891</td>
+    <td align="right">849137</td>
+    <td align="right">844491</td>
+    <td align="right">918146</td>
+    <td align="right">891795</td>
+    </tr>
+    <tr>
+    <td>#Vocabs (for CC)</td>
+    <td align="right">47858</td>
+    <td align="right">47858</td>
+    <td align="right">47858</td>
+    <td align="right">47858</td>
+    <td align="right">47858</td>
+    </tr>
+</tbody></table>
+
+<br/>
+
+
+<label  for="table2">Table 2: Statistics of datasets under shift across different projects.</label>
+<table  class="table table-bordered table-hover table-condensed" name="table1">
+    <thead><tr><th title="Field #1">Different Projects</th>
+    <th title="Field #2">Training</th>
+    <th title="Field #3">Validation</th>
+    <th title="Field #4">Shift1</th>
+    <th title="Field #4">Shift2</th>
+    <th title="Field #4">Shift3</th>
+    </tr></thead>
+    <tbody><tr>
+    <td>#Files</td>
+    <td align="right">8500</td>
+    <td align="right">2489</td>
+    <td align="right">4141</td>
+    <td align="right">2489</td>
+    <td align="right">2558</td>
+    </tr>
+    </tr></thead>
+    <tr>
+    <td>#Instances (for CS)</td>
+    <td align="right">37439</td>
+    <td align="right">16912</td>
+    <td align="right">37262</td>
+    <td align="right">29090</td>
+    <td align="right">11952</td>
+    </tr>
+    <tr>
+    <td>#Tokens (for CS)</td>
+    <td align="right">54259</td>
+    <td align="right">54259</td>
+    <td align="right">54259</td>
+    <td align="right">54259</td>
+    <td align="right">54259</td>
+    </tr>
+    <tr>
+    <td>#Paths (for CS)</td>
+    <td align="right">399072</td>
+    <td align="right">399072</td>
+    <td align="right">399072</td>
+    <td align="right">399072</td>
+    <td align="right">399072</td>
+    </tr>
+    <tr>
+    <td>#Functions (for CS)</td>
+    <td align="right">10400</td>
+    <td align="right">10400</td>
+    <td align="right">10400</td>
+    <td align="right">10400</td>
+    <td align="right">10400</td>
+    </tr>
+    <tr>
+    <td>#Instances (for CC)</td>
+    <td align="right">2445945</td>
+    <td align="right">1070766</td>
+    <td align="right">2238540</td>
+    <td align="right">1156032</td>
+    <td align="right">650009</td>
+    </tr>
+    <tr>
+    <td>#Vocabs (for CC)</td>
+    <td align="right">15024</td>
+    <td align="right">15024</td>
+    <td align="right">15024</td>
+    <td align="right">15024</td>
+    <td align="right">15024</td>
+    </tr>
+</tbody></table>
+
+<br/>
+
+
+<label  for="table3">Table 3: Statistics of datasets under shift across different authors.</label>
+<table  class="table table-bordered table-hover table-condensed" name="table1">
+    <thead><tr><th title="Field #1">Different Authors</th>
+    <th title="Field #2">Training</th>
+    <th title="Field #3">Validation</th>
+    <th title="Field #4">Shift1</th>
+    <th title="Field #4">Shift2</th>
+    <th title="Field #4">Shift3</th>
+    </tr></thead>
+    <tbody><tr>
+    <td>#Files</td>
+    <td align="right">7137</td>
+    <td align="right">3059</td>
+    <td align="right">2760</td>
+    <td align="right">2378</td>
+    <td align="right">2680</td>
+    </tr>
+    </tr></thead>
+    <tr>
+    <td>#Instances (for CS)</td>
+    <td align="right">63198</td>
+    <td align="right">28279</td>
+    <td align="right">24307</td>
+    <td align="right">17179</td>
+    <td align="right">20263</td>
+    </tr>
+    <tr>
+    <td>#Tokens (for CS)</td>
+    <td align="right">388017</td>
+    <td align="right">388017</td>
+    <td align="right">388017</td>
+    <td align="right">388017</td>
+    <td align="right">388017</td>
+    </tr>
+    <tr>
+    <td>#Paths (for CS)</td>
+    <td align="right">450702</td>
+    <td align="right">450702</td>
+    <td align="right">450702</td>
+    <td align="right">450702</td>
+    <td align="right">450702</td>
+    </tr>
+    <tr>
+    <td>#Functions (for CS)</td>
+    <td align="right">11755</td>
+    <td align="right">11755</td>
+    <td align="right">11755</td>
+    <td align="right">11755</td>
+    <td align="right">11755</td>
+    </tr>
+    <tr>
+    <td>#Instances (for CC)</td>
+    <td align="right">3782628</td>
+    <td align="right">1655909</td>
+    <td align="right">1479820</td>
+    <td align="right">891245</td>
+    <td align="right">1035757</td>
+    </tr>
+    <tr>
+    <td>#Vocabs (for CC)</td>
+    <td align="right">19118</td>
+    <td align="right">19118</td>
+    <td align="right">19118</td>
+    <td align="right">19118</td>
+    <td align="right">19118</td>
+    </tr>
+</tbody></table>
+
+<br/>
+
+<p id="table">Supplementary information about Java-small and Python150k datasets.</p>
+<label  for="table4">Table 4: Statistics of Java-small dataset.</label>
+<table  class="table table-bordered table-hover table-condensed" name="table1">
+    <thead><tr><th title="Field #1">Java-small</th>
+    <th title="Field #2">Training</th>
+    <th title="Field #3">Validation</th>
+    <th title="Field #4">Test</th>
+    </tr></thead>
+    <tbody><tr>
+    <td>#Files</td>
+    <td align="right">89393</td>
+    <td align="right">3875</td>
+    <td align="right">5269</td>
+    </tr>
+    </tr></thead>
+    <tr>
+    <td>#Instances (for CS)</td>
+    <td align="right">665115</td>
+    <td align="right">23505</td>
+    <td align="right">56165</td>
+    </tr>
+    <tr>
+    <td>#Tokens (for CS)</td>
+    <td align="right">493753</td>
+    <td align="right">493753</td>
+    <td align="right">493753</td>
+    </tr>
+    <tr>
+    <td>#Paths (for CS)</td>
+    <td align="right">1223820</td>
+    <td align="right">1223820</td>
+    <td align="right">1223820</td>
+    </tr>
+    <tr>
+    <td>#Functions (for CS)</td>
+    <td align="right">12635</td>
+    <td align="right">12635</td>
+    <td align="right">12635</td>
+    </tr>
+    <tr>
+    <td>#Instances (for CC)</td>
+    <td align="right">38498159</td>
+    <td align="right">1062852</td>
+    <td align="right">2091806</td>
+    </tr>
+    <tr>
+    <td>#Vocabs (for CC)</td>
+    <td align="right">155555</td>
+    <td align="right">155555</td>
+    <td align="right">155555</td>
+    </tr>
+</tbody></table>
+    
+<br/>
+
+<label  for="table5">Table 5: Statistics of Python150k dataset.</label>
+<table  class="table table-bordered table-hover table-condensed" name="table2">
+    <thead><tr><th title="Field #1">Python150k</th>
+    <th title="Field #2">Training</th>
+    <th title="Field #3">Validation</th>
+    <th title="Field #4">Test</th>
+    </tr></thead>
+    <tbody><tr>
+    <td>#Files</td>
+    <td align="right">85000</td>
+    <td align="right">15000</td>
+    <td align="right">50000</td>
+    </tr>
+    <tr>
+    <td>#Instances (for CS)</td>
+    <td align="right">682493</td>
+    <td align="right">167589</td>
+    <td align="right">417699</td>
+    </tr>
+    <tr>
+    <td>#Tokens (for CS)</td>
+    <td align="right">387979</td>
+    <td align="right">387979</td>
+    <td align="right">387979</td>
+    </tr>
+    <tr>
+    <td>#Paths (for CS)</td>
+    <td align="right">450993</td>
+    <td align="right">450993</td>
+    <td align="right">450993</td>
+    </tr>
+    <tr>
+    <td>#Functions (for CS)</td>
+    <td align="right">22180</td>
+    <td align="right">22180</td>
+    <td align="right">22180</td>
+    </tr>
+    <tr>
+    <td>#Instances (for CC)</td>
+    <td align="right">59386356</td>
+    <td align="right">11519873</td>
+    <td align="right">32458085</td>
+    </tr>
+    <tr>
+    <td>#Vocabs (for CC)</td>
+    <td align="right">332166</td>
+    <td align="right">332166</td>
+    <td align="right">332166</td>
+    </tr>
+</tbody></table>
+
+<br/>
+
+<h2 id="figures">Figures</h2>
+<p id="figure2">Confidence distribution of the five methods for two common models (BiLSTM & CodeBERT) on both tasks (CS & CC).</p>
+<label for="figure2">Figure 1: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (BiLSTM on CS task).</label>
+<img name="figure2" src="Figure/cs_lstm_confidence.png">
+
+<br/>
+
+<label for="figure3">Figure 2: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (CodeBERT on CS task).</label>
+<img name="figure3" src="Figure/cs_codebert_confidence.png">
+
+<br/>
+
+<label for="figure4">Figure 3: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (BiLSTM on CC task).</label>
+<img name="figure4" src="Figure/cc_lstm_confidence.png">
+
+<br/>
+
+<label for="figure5">Figure 4: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (CodeBERT on CC task).</label>
+<img name="figure5" src="Figure/cc_codebert_confidence.png">
