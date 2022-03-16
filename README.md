@@ -1,8 +1,8 @@
 # Uncertainty Study
 ### [project website](https://99svd.github.io/UncertaintyStudy/)
-A study of the existing state-of-the-art uncertainty methods under program distribution shift:
+An Impact Study of Program Data Shift Towards Code Analysis Model and Uncertainty Measurement:
 
-This is a PyTorch implementation of two programming tasks, namely, code summarization and code completion with three model archiectures for each task. We also use the Java and Python extractors for preprocessing the input code. It can also be extended to other languages, since the PyTorch network is agnostic to the input programming language.
+This is a PyTorch implementation of two code analysis tasks, namely, code summarization and code completion with three model archiectures for each task. We use the Java and Python extractors to preprocess the raw code snippets. Users may further extend the work to other programming languages following our study.
 
 <p align="center">
   <img src="Figure/program_shift.png" width="70%" height="70%">
