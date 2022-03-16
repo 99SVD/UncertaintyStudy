@@ -342,8 +342,8 @@ Illustration of three program data shifts:
 <br/>
 
 <h2 id="figures">Error/success prediction (RQ2.1)</h2>
-<p id="figure2">AUPR scores for the 5 uncertainty methods under three program data shifts.</p>
-<label for="figure2">Figure 1: AUPR scores for the 5 uncertainty methods under Timeline shift (top), Project shift (middle), and Author shift (bottom).</label>
+<p id="figure2">AUPR, Brier scores for the 5 uncertainty methods under three program data shifts.</p>
+<label for="figure2">Figure 1: AUPR scores for the 5 uncertainty methods under Timeline shift (top), Project shift (middle), and Author shift (bottom) on CS (left) and CC (right) task.</label>
 <img name="figure2" src="Figure/time_aupr.png">
 <br/>
 <img name="figure3" src="Figure/project_aupr.png">
@@ -351,23 +351,31 @@ Illustration of three program data shifts:
 <img name="figure4" src="Figure/author_aupr.png">
 <br/>
 
+<label for="figure2">Figure 2: Brier scores for the 5 uncertainty methods under Timeline shift (top), Project shift (middle), and Author shift (bottom) on CS (left) and CC (right) task.</label>
+<img name="figure2" src="Figure/time_brier.png">
+<br/>
+<img name="figure3" src="Figure/project_brier.png">
+<br/>
+<img name="figure4" src="Figure/author_brier.png">
+<br/>
+
 
 <h2 id="figures">Uncertainty distribution (RQ2.3)</h2>
 <p id="figure2">Confidence distribution of the five methods for two common models (BiLSTM & CodeBERT) on both tasks (CS & CC).</p>
-<label for="figure2">Figure 1: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (BiLSTM on CS task).</label>
+<label for="figure2">Figure 3: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (BiLSTM on CS task).</label>
 <img name="figure2" src="Figure/cs_lstm_confidence.png">
 
 <br/>
 
-<label for="figure3">Figure 2: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (CodeBERT on CS task).</label>
+<label for="figure3">Figure 4: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (CodeBERT on CS task).</label>
 <img name="figure3" src="Figure/cs_codebert_confidence.png">
 
 <br/>
 
-<label for="figure4">Figure 3: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (BiLSTM on CC task).</label>
+<label for="figure4">Figure 5: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (BiLSTM on CC task).</label>
 <img name="figure4" src="Figure/cc_lstm_confidence.png">
 
 <br/>
 
-<label for="figure5">Figure 4: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (CodeBERT on CC task).</label>
+<label for="figure5">Figure 6: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (CodeBERT on CC task).</label>
 <img name="figure5" src="Figure/cc_codebert_confidence.png">
