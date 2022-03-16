@@ -10,10 +10,12 @@ We also investigate the effectiveness of existing state-of-the-artuncertainty ap
 <br/>
 
 Illustration of three program data shifts:
-<img name="figure0" src="Figure/program_shift.png" width="70%" height="70%">
+<p style="text-align:center;"><img name="figure0" src="Figure/program_shift.png" width="70%" height="70%">
+
+<br/>
 
 Logical overview of our study:
-<p style="text-align:center;"><img name="figure0" src="Figure/study_overview.png" width="100%" height="100%">
+<p style="text-align:center;"></p><img name="figure0" src="Figure/study_overview.png" width="100%" height="100%">
 
 <br/>
 
@@ -339,7 +341,25 @@ Logical overview of our study:
 
 <br/>
 
-<h2 id="figures">Uncertainty distribution</h2>
+<h2 id="figures">Error/success prediction (RQ2.1)</h2>
+<p id="figure2">AUPR scores for the 5 uncertainty methods under three program data shifts.</p>
+<label for="figure2">Figure 1: AUPR scores for the 5 uncertainty methods under Timeline shift.</label>
+<img name="figure2" src="Figure/time_aupr.png">
+
+<br/>
+
+<label for="figure3">Figure 2: AUPR scores for the 5 uncertainty methods under Project shift.</label>
+<img name="figure3" src="Figure/project_aupr.png">
+
+<br/>
+
+<label for="figure4">Figure 3: AUPR scores for the 5 uncertainty methods under Author shift.</label>
+<img name="figure4" src="Figure/author_aupr.png">
+
+<br/>
+
+
+<h2 id="figures">Uncertainty distribution (RQ2.3)</h2>
 <p id="figure2">Confidence distribution of the five methods for two common models (BiLSTM & CodeBERT) on both tasks (CS & CC).</p>
 <label for="figure2">Figure 1: Histograms of the predictive distributions for in-distribution (solid lines), shifted (dashed lines), and completely OOD (dotted lines) program examples (BiLSTM on CS task).</label>
 <img name="figure2" src="Figure/cs_lstm_confidence.png">
