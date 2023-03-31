@@ -25,20 +25,13 @@ Code analysis architecture:
 ## Quickstart
 ### Step 0: Cloning this repository
 ```
-git clone https://github.com/GAET-embedding/Uncertainty_Study.git
+git clone https://github.com/99SVD/UncertaintyStudy.git
 cd Uncertainty_Study
 ```
 ### Step 1: Download our shifted datasets (from the seven Java projects)
 #### Download our preprocessed [dataset](https://drive.google.com/file/d/1kICpY7daVo9pp9MHukTPgi2xUserxdar/view?usp=sharing)
 ```
 unzip dataset
-```
-#### Download the preprocessed Java-small dataset (~60 K examples, compressed: 84MB) and Python150k dataset for OOD detection (~150 K examples, compressed: 526MB)
-```
-wget https://s3.amazonaws.com/code2seq/datasets/java-small.tar.gz
-tar -xvzf java-small.tar.gz
-wget http://files.srl.inf.ethz.ch/data/py150.tar.gz
-tar -xzvf py150.tar.gz
 ```
 ### Step 2: Training a model
 #### Training a model from scratch
