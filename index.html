@@ -12,608 +12,19 @@ Below is the illustration of three code data shifts:
 <br/>
 
 <h2 id="overview">Study overview</h2>
+Below is the illustration of our study overview:
 <p style="text-align:center;"></p><img name="figure1" src="Figure/overview.png" width="100%" height="100%">
 
 <br/>
 
 <h2 id="code analysis">Code analysis architecture</h2>
+Below is an example of the code analysis architecture for Method Name Prediction (MNP) task:
 <p style="text-align:center;"></p><img name="figure2" src="Figure/code_analysis.png" width="50%" height="50%">
 
 <br/>
 
-<!-- <h2 id="tables">Datasets</h2>
-<p id="table1">Supplementary information about our three shifted datasets.</p>
-<label  for="table1">Table 1: Statistics of datasets under shift across different timelines.</label>
-<table  class="table table-bordered table-hover table-condensed" name="table1">
-    <thead><tr><th title="Field #1">Different Timelines</th>
-    <th title="Field #2">Training</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Shift1</th>
-    <th title="Field #4">Shift2</th>
-    <th title="Field #4">Shift3</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>#Files</td>
-    <td align="right">26436</td>
-    <td align="right">2538</td>
-    <td align="right">2538</td>
-    <td align="right">2538</td>
-    <td align="right">2538</td>
-    </tr>
-    </tr></thead>
-    <tr>
-    <td>#Instances (for CS)</td>
-    <td align="right">185557</td>
-    <td align="right">17598</td>
-    <td align="right">18226</td>
-    <td align="right">17855</td>
-    <td align="right">17296</td>
-    </tr>
-    <tr>
-    <td>#Tokens (for CS)</td>
-    <td align="right">193284</td>
-    <td align="right">193284</td>
-    <td align="right">193284</td>
-    <td align="right">193284</td>
-    <td align="right">193284</td>
-    </tr>
-    <tr>
-    <td>#Paths (for CS)</td>
-    <td align="right">702502</td>
-    <td align="right">702502</td>
-    <td align="right">702502</td>
-    <td align="right">702502</td>
-    <td align="right">702502</td>
-    </tr>
-    <tr>
-    <td>#Functions (for CS)</td>
-    <td align="right">10737</td>
-    <td align="right">10737</td>
-    <td align="right">10737</td>
-    <td align="right">10737</td>
-    <td align="right">10737</td>
-    </tr>
-    <tr>
-    <td>#Instances (for CC)</td>
-    <td align="right">8679891</td>
-    <td align="right">849137</td>
-    <td align="right">844491</td>
-    <td align="right">918146</td>
-    <td align="right">891795</td>
-    </tr>
-    <tr>
-    <td>#Vocabs (for CC)</td>
-    <td align="right">47858</td>
-    <td align="right">47858</td>
-    <td align="right">47858</td>
-    <td align="right">47858</td>
-    <td align="right">47858</td>
-    </tr>
-</tbody></table>
-
-<br/>
-
-
-<label  for="table2">Table 2: Statistics of datasets under shift across different projects.</label>
-<table  class="table table-bordered table-hover table-condensed" name="table2">
-    <thead><tr><th title="Field #1">Different Projects</th>
-    <th title="Field #2">Training</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Shift1</th>
-    <th title="Field #4">Shift2</th>
-    <th title="Field #4">Shift3</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>#Files</td>
-    <td align="right">8500</td>
-    <td align="right">2489</td>
-    <td align="right">4141</td>
-    <td align="right">2489</td>
-    <td align="right">2558</td>
-    </tr>
-    </tr></thead>
-    <tr>
-    <td>#Instances (for CS)</td>
-    <td align="right">37439</td>
-    <td align="right">16912</td>
-    <td align="right">37262</td>
-    <td align="right">29090</td>
-    <td align="right">11952</td>
-    </tr>
-    <tr>
-    <td>#Tokens (for CS)</td>
-    <td align="right">54259</td>
-    <td align="right">54259</td>
-    <td align="right">54259</td>
-    <td align="right">54259</td>
-    <td align="right">54259</td>
-    </tr>
-    <tr>
-    <td>#Paths (for CS)</td>
-    <td align="right">399072</td>
-    <td align="right">399072</td>
-    <td align="right">399072</td>
-    <td align="right">399072</td>
-    <td align="right">399072</td>
-    </tr>
-    <tr>
-    <td>#Functions (for CS)</td>
-    <td align="right">10400</td>
-    <td align="right">10400</td>
-    <td align="right">10400</td>
-    <td align="right">10400</td>
-    <td align="right">10400</td>
-    </tr>
-    <tr>
-    <td>#Instances (for CC)</td>
-    <td align="right">2445945</td>
-    <td align="right">1070766</td>
-    <td align="right">2238540</td>
-    <td align="right">1156032</td>
-    <td align="right">650009</td>
-    </tr>
-    <tr>
-    <td>#Vocabs (for CC)</td>
-    <td align="right">15024</td>
-    <td align="right">15024</td>
-    <td align="right">15024</td>
-    <td align="right">15024</td>
-    <td align="right">15024</td>
-    </tr>
-</tbody></table>
-
-<br/>
-
-
-<label  for="table3">Table 3: Statistics of datasets under shift across different authors.</label>
-<table  class="table table-bordered table-hover table-condensed" name="table3">
-    <thead><tr><th title="Field #1">Different Authors</th>
-    <th title="Field #2">Training</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Shift1</th>
-    <th title="Field #4">Shift2</th>
-    <th title="Field #4">Shift3</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>#Files</td>
-    <td align="right">7137</td>
-    <td align="right">3059</td>
-    <td align="right">2760</td>
-    <td align="right">2378</td>
-    <td align="right">2680</td>
-    </tr>
-    </tr></thead>
-    <tr>
-    <td>#Instances (for CS)</td>
-    <td align="right">63198</td>
-    <td align="right">28279</td>
-    <td align="right">24307</td>
-    <td align="right">17179</td>
-    <td align="right">20263</td>
-    </tr>
-    <tr>
-    <td>#Tokens (for CS)</td>
-    <td align="right">388017</td>
-    <td align="right">388017</td>
-    <td align="right">388017</td>
-    <td align="right">388017</td>
-    <td align="right">388017</td>
-    </tr>
-    <tr>
-    <td>#Paths (for CS)</td>
-    <td align="right">450702</td>
-    <td align="right">450702</td>
-    <td align="right">450702</td>
-    <td align="right">450702</td>
-    <td align="right">450702</td>
-    </tr>
-    <tr>
-    <td>#Functions (for CS)</td>
-    <td align="right">11755</td>
-    <td align="right">11755</td>
-    <td align="right">11755</td>
-    <td align="right">11755</td>
-    <td align="right">11755</td>
-    </tr>
-    <tr>
-    <td>#Instances (for CC)</td>
-    <td align="right">3782628</td>
-    <td align="right">1655909</td>
-    <td align="right">1479820</td>
-    <td align="right">891245</td>
-    <td align="right">1035757</td>
-    </tr>
-    <tr>
-    <td>#Vocabs (for CC)</td>
-    <td align="right">19118</td>
-    <td align="right">19118</td>
-    <td align="right">19118</td>
-    <td align="right">19118</td>
-    <td align="right">19118</td>
-    </tr>
-</tbody></table>
-
-<br/>
-
-<p id="table">Supplementary information about Java-small (in-dist) and Python150k (OOD) datasets.</p>
-<label  for="table4">Table 4: Statistics of Java-small dataset.</label>
-<table  class="table table-bordered table-hover table-condensed" name="table4">
-    <thead><tr><th title="Field #1">Java-small</th>
-    <th title="Field #2">Training</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Test</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>#Files</td>
-    <td align="right">89393</td>
-    <td align="right">3875</td>
-    <td align="right">5269</td>
-    </tr>
-    </tr></thead>
-    <tr>
-    <td>#Instances (for CS)</td>
-    <td align="right">665115</td>
-    <td align="right">23505</td>
-    <td align="right">56165</td>
-    </tr>
-    <tr>
-    <td>#Tokens (for CS)</td>
-    <td align="right">493753</td>
-    <td align="right">493753</td>
-    <td align="right">493753</td>
-    </tr>
-    <tr>
-    <td>#Paths (for CS)</td>
-    <td align="right">1223820</td>
-    <td align="right">1223820</td>
-    <td align="right">1223820</td>
-    </tr>
-    <tr>
-    <td>#Functions (for CS)</td>
-    <td align="right">12635</td>
-    <td align="right">12635</td>
-    <td align="right">12635</td>
-    </tr>
-    <tr>
-    <td>#Instances (for CC)</td>
-    <td align="right">38498159</td>
-    <td align="right">1062852</td>
-    <td align="right">2091806</td>
-    </tr>
-    <tr>
-    <td>#Vocabs (for CC)</td>
-    <td align="right">155555</td>
-    <td align="right">155555</td>
-    <td align="right">155555</td>
-    </tr>
-</tbody></table>
-   
-<br/>
-
-<label  for="table5">Table 5: Statistics of Python150k dataset.</label>
-<table  class="table table-bordered table-hover table-condensed" name="table5">
-    <thead><tr><th title="Field #1">Python150k</th>
-    <th title="Field #2">Training</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Test</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>#Files</td>
-    <td align="right">85000</td>
-    <td align="right">15000</td>
-    <td align="right">50000</td>
-    </tr>
-    <tr>
-    <td>#Instances (for CS)</td>
-    <td align="right">682493</td>
-    <td align="right">167589</td>
-    <td align="right">417699</td>
-    </tr>
-    <tr>
-    <td>#Tokens (for CS)</td>
-    <td align="right">387979</td>
-    <td align="right">387979</td>
-    <td align="right">387979</td>
-    </tr>
-    <tr>
-    <td>#Paths (for CS)</td>
-    <td align="right">450993</td>
-    <td align="right">450993</td>
-    <td align="right">450993</td>
-    </tr>
-    <tr>
-    <td>#Functions (for CS)</td>
-    <td align="right">22180</td>
-    <td align="right">22180</td>
-    <td align="right">22180</td>
-    </tr>
-    <tr>
-    <td>#Instances (for CC)</td>
-    <td align="right">59386356</td>
-    <td align="right">11519873</td>
-    <td align="right">32458085</td>
-    </tr>
-    <tr>
-    <td>#Vocabs (for CC)</td>
-    <td align="right">332166</td>
-    <td align="right">332166</td>
-    <td align="right">332166</td>
-    </tr>
-</tbody></table> -->
-
-<!-- <br/> -->
-
-<!-- <h2 id="figures">Performance of DL models under code data shifts</h2>
-<p id="table">Supplementary information about F-1 of code analysis models for MNP and CC under code data shifts.</p>
-<label  for="table4">Table 6: F-1 scores for the MNP task under three data shifts.</label>
-<table  class="table table-bordered table-hover table-condensed" name="table6">
-    <thead><tr><th title="Field #1">Model</th>
-    <th title="Field #2">Shift type</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Shift1</th>
-    <th title="Field #5">Shift2</th>
-    <th title="Field #6">Shift3</th>
-    <th title="Field #7">Max gap</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>Code2Vec</td>
-    <td align="right">Timeline</td>
-    <td align="right">58.99</td>
-    <td align="right">58.73</td> -->
-    <!-- <td align="right">58.00</td>
-    <td align="right">57.61</td>
-    <td align="right">1.38</td>
-    </tr>
-    </tr></thead>
-    <tr>
-    <td>Code2Vec</td>
-    <td align="right">Project</td>
-    <td align="right">59.95</td>
-    <td align="right">34.85</td>
-    <td align="right">33.83</td>
-    <td align="right">28.59</td>
-    <td align="right">31.36</td>
-    </tr>
-    <tr>
-    <td>Code2Vec</td>
-    <td align="right">Author</td>
-    <td align="right">58.37</td>
-    <td align="right">51.73</td>
-    <td align="right">33.57</td>
-    <td align="right">31.88</td>
-    <td align="right">26.49</td>
-    </tr>
-    <tr>
-    <td>CodeRoBERTa</td>
-    <td align="right">Timeline</td>
-    <td align="right">49.38</td>
-    <td align="right">46.45</td>
-    <td align="right">46.07</td>
-    <td align="right">45.91</td>
-    <td align="right">3.47</td>
-    </tr>
-    <tr>
-    <td>CodeRoBERTa</td>
-    <td align="right">Project</td>
-    <td align="right">56.10</td>
-    <td align="right">33.41</td>
-    <td align="right">33.10</td>
-    <td align="right">24.07</td>
-    <td align="right">32.03</td>
-    </tr>
-    <tr>
-    <td>CodeRoBERTa</td>
-    <td align="right">Author</td>
-    <td align="right">52.41</td>
-    <td align="right">49.79</td>
-    <td align="right">29.09</td>
-    <td align="right">27.42</td>
-    <td align="right">24.99</td>
-    </tr>
-    <tr>
-    <td>GraphCodeBERT</td>
-    <td align="right">Timeline</td>
-    <td align="right">64.34</td>
-    <td align="right">62.27</td>
-    <td align="right">61.25</td>
-    <td align="right">58.45</td>
-    <td align="right">5.89</td>
-    </tr>
-    <tr>
-    <td>GraphCodeBERT</td>
-    <td align="right">Project</td>
-    <td align="right">57.90</td>
-    <td align="right">36.39</td>
-    <td align="right">35.37</td>
-    <td align="right">26.14</td>
-    <td align="right">31.76</td>
-    </tr>
-    <tr>
-    <td>GraphCodeBERT</td>
-    <td align="right">Author</td>
-    <td align="right">61.60</td>
-    <td align="right">53.66</td>
-    <td align="right">32.82</td>
-    <td align="right">32.37</td>
-    <td align="right">29.23</td>
-    </tr>
-</tbody></table>
-
-<br/>
-
-<label  for="table4">Table 7: F-1 scores for the CC task under three data shifts.</label>
-<table  class="table table-bordered table-hover table-condensed" name="table7">
-    <thead><tr><th title="Field #1">Model</th>
-    <th title="Field #2">Shift type</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Shift1</th>
-    <th title="Field #5">Shift2</th>
-    <th title="Field #6">Shift3</th>
-    <th title="Field #7">Max gap</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>CodeRNN</td>
-    <td align="right">Timeline</td>
-    <td align="right">45.99</td>
-    <td align="right">45.51</td>
-    <td align="right">45.49</td>
-    <td align="right">45.23</td>
-    <td align="right">0.76</td>
-    </tr>
-    </tr></thead>
-    <tr>
-    <td>CodeRNN</td>
-    <td align="right">Project</td>
-    <td align="right">50.28</td>
-    <td align="right">43.39</td>
-    <td align="right">41.67</td>
-    <td align="right">40.09</td>
-    <td align="right">10.19</td>
-    </tr>
-    <tr>
-    <td>CodeRNN</td>
-    <td align="right">Author</td>
-    <td align="right">47.87</td>
-    <td align="right">47.78</td>
-    <td align="right">44.71</td>
-    <td align="right">44.32</td>
-    <td align="right">3.55</td>
-    </tr>
-    <tr>
-    <td>CodeBERT</td>
-    <td align="right">Timeline</td>
-    <td align="right">68.63</td>
-    <td align="right">68.52</td>
-    <td align="right">68.43</td>
-    <td align="right">68.23</td>
-    <td align="right">0.40</td>
-    </tr>
-    <tr>
-    <td>CodeBERT</td>
-    <td align="right">Project</td>
-    <td align="right">72.74</td>
-    <td align="right">71.63</td>
-    <td align="right">70.46</td>
-    <td align="right">68.02</td>
-    <td align="right">4.72</td>
-    </tr>
-    <tr>
-    <td>CodeBERT</td>
-    <td align="right">Author</td>
-    <td align="right">69.73</td>
-    <td align="right">69.32</td>
-    <td align="right">68.71</td>
-    <td align="right">68.54</td>
-    <td align="right">1.19</td>
-    </tr>
-    <tr>
-    <td>CodeGPT</td>
-    <td align="right">Timeline</td>
-    <td align="right">67.20</td>
-    <td align="right">66.80</td>
-    <td align="right">65.91</td>
-    <td align="right">65.48</td>
-    <td align="right">1.72</td>
-    </tr>
-    <tr>
-    <td>CodeGPT</td>
-    <td align="right">Project</td>
-    <td align="right">69.44</td>
-    <td align="right">57.64</td>
-    <td align="right">53.90</td>
-    <td align="right">48.80</td>
-    <td align="right">20.64</td>
-    </tr>
-    <tr>
-    <td>CodeGPT</td>
-    <td align="right">Author</td>
-    <td align="right">68.90</td>
-    <td align="right">68.44</td>
-    <td align="right">65.68</td>
-    <td align="right">65.43</td>
-    <td align="right">3.47</td>
-    </tr>
-</tbody></table>
-
-<br/> -->
-
-<!-- <label  for="table8">Table 8: F-1 of three code analysis models for CS task under timeline shifts (on Elasticsearch with 6 month gap).</label>
-<table  class="table table-bordered table-hover table-condensed" name="table8">
-    <thead><tr><th title="Field #1">Model</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Shift1</th>
-    <th title="Field #5">Shift2</th>
-    <th title="Field #6">Shift3</th>
-    <th title="Field #7">Max gap</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>Word2Vec</td>
-    <td align="right">53.68</td>
-    <td align="right">53.21</td>
-    <td align="right">53.06</td>
-    <td align="right">52.77</td>
-    <td align="right">0.91</td>
-    </tr>
-    </tr></thead>
-    <tr>
-    <td>BiLSTM</td>
-    <td align="right">63.08</td>
-    <td align="right">63.04</td>
-    <td align="right">62.97</td>
-    <td align="right">62.84</td>
-    <td align="right">0.24</td>
-    </tr>
-    <tr>
-    <td>CodeBERT</td>
-    <td align="right">63.17</td>
-    <td align="right">63.01</td>
-    <td align="right">62.59</td>
-    <td align="right">62.15</td>
-    <td align="right">1.02</td>
-    </tr>
-</tbody></table>
-
-<br/>
-
-<label  for="table9">Table 9: Accuracy of three code analysis models for CC task under timeline shifts (on Elasticsearch with 6 month gap).</label>
-<table  class="table table-bordered table-hover table-condensed" name="table9">
-    <thead><tr><th title="Field #1">Model</th>
-    <th title="Field #3">Validation</th>
-    <th title="Field #4">Shift1</th>
-    <th title="Field #5">Shift2</th>
-    <th title="Field #6">Shift3</th>
-    <th title="Field #7">Max gap</th>
-    </tr></thead>
-    <tbody><tr>
-    <td>Word2Vec</td>
-    <td align="right">42.81</td>
-    <td align="right">42.78</td>
-    <td align="right">42.72</td>
-    <td align="right">45.70</td>
-    <td align="right">0.11</td>
-    </tr>
-    </tr></thead>
-    <tr>
-    <td>BiLSTM</td>
-    <td align="right">66.39</td>
-    <td align="right">66.35</td>
-    <td align="right">66.32</td>
-    <td align="right">66.26</td>
-    <td align="right">0.13</td>
-    </tr>
-    <tr>
-    <td>CodeBERT</td>
-    <td align="right">64.71</td>
-    <td align="right">64.22</td>
-    <td align="right">63.59</td>
-    <td align="right">63.37</td>
-    <td align="right">1.34</td>
-    </tr>
-</tbody></table>
-<br/> -->
-
 <h2 id="figures">Model performance under three code data shifts with varying shift intensities (old version)</h2>
-
+* In the old version, we use three models (Code2Vec, CodeBERTa, GraphCodeBERT) for Method Name Prediction, and another three models (CodeRNN, CodeBERT, CodeGPT) for Code Completion.
 <div style="display:flex; justify-content:space-around; align-items:center;">
     <div>
         <img name="figure1" src="Figure/method_name_prediction.png" width="100%" height="100%">
@@ -629,7 +40,7 @@ Below is the illustration of three code data shifts:
 
 
 <h2 id="figures">Model performance under three code data shifts with varying shift intensities (LLM version)</h2>
-
+* In the LLM version, we use three LLMs (open_llama_13b, gpt-neox-20b, xlm-roberta-xxl) for both MNP and CC tasks.
 <div style="display:flex; justify-content:space-around; align-items:center;">
     <div>
         <img name="figure3" src="Figure/method_name_prediction_llm.png" width="100%" height="100%">
@@ -652,43 +63,52 @@ Below is the illustration of three code data shifts:
 <label  for="figure4">Figure 6: AUC, AUPR, and Brier scores for the five uncertainties on the CC task.</label>
 <br/>
 
+<h2 id="figures">Misclassification prediction (current version)</h2>
+* In the current version, we use all six models (Code2Vec, CodeBERTa, GraphCodeBERT, CodeRNN, CodeBERT, CodeGPT) for both MNP and CC tasks.
+<p style="text-align:left;"><img name="figure5" src="Figure/cs_miscls_detect_aupr.png" width="100%" height="100%">
+<label  for="figure5">Figure 7: AUPR scores for the five uncertainties on the MNP task.</label>
+<br/>
+<p style="text-align:left;"><img name="figure4" src="Figure/cc_miscls_detect_aupr.png" width="100%" height="100%">
+<label  for="figure6">Figure 8: AUPR scores for the five uncertainties on the CC task.</label>
+<br/>
+
 <h2 id="figures">Misclassification prediction (LLM version)</h2>
 <p style="text-align:left;"><img name="figure7" src="Figure/cs_miscls_detect_llm.png" width="100%" height="100%">
-<label  for="figure5">Figure 7: AUC, AUPR, and Brier scores for the five uncertainties on the MNP task.</label>
+<label  for="figure7">Figure 9: AUC, AUPR, and Brier scores for the five uncertainties on the MNP task.</label>
 <br/>
 <p style="text-align:left;"><img name="figure4" src="Figure/cc_miscls_detect_llm.png" width="100%" height="100%">
-<label  for="figure6">Figure 8: AUC, AUPR, and Brier scores for the five uncertainties on the CC task.</label>
+<label  for="figure8">Figure 10: AUC, AUPR, and Brier scores for the five uncertainties on the CC task.</label>
 <br/>
 
 <h2 id="figures">Input validation (old version)</h2>
 <p style="text-align:left;"><img name="figure6" src="Figure/filter_cs.png" width="100%" height="100%">
-<label  for="figure7">Figure 9: Input validation for in-distribution and shifted code samples on the MNP task.</label>
+<label  for="figure9">Figure 11: Input validation for in-distribution and shifted code samples on the MNP task.</label>
 <br/>
 <p style="text-align:left;"><img name="figure7" src="Figure/filter_cc.png" width="100%" height="100%">
-<label  for="figure8">Figure 10: Input validation for in-distribution and shifted code samples on the CC task.</label>
+<label  for="figure10">Figure 12: Input validation for in-distribution and shifted code samples on the CC task.</label>
 <br/>
 
 <h2 id="figures">Misclassification prediction for case study (old version)</h2>
 <p style="text-align:left;"><img name="figure8" src="Figure/case_cs_old.png" width="100%" height="100%">
-<label  for="figure9">Figure 11: AUC, AUPR, and Brier scores for the five uncertainties on the MNP task.</label>
+<label  for="figure11">Figure 13: AUC, AUPR, and Brier scores for the five uncertainties on the MNP task.</label>
 <br/>
 <p style="text-align:left;"><img name="figure9" src="Figure/case_cc_old.png" width="100%" height="100%">
-<label  for="figure10">Figure 12: AUC, AUPR, and Brier scores for the five uncertainties on the CC task.</label>
+<label  for="figure12">Figure 14: AUC, AUPR, and Brier scores for the five uncertainties on the CC task.</label>
 <br/>
 
 <h2 id="figures">Input validation for case study (old version)</h2>
 
 <div style="display:flex; justify-content:space-around; align-items:center;">
     <div>
-        <img name="figure11" src="Figure/filter_cs_study.png" width="100%" height="100%">
+        <img name="figure13" src="Figure/filter_cs_study.png" width="100%" height="100%">
     </div>
 
     <div>
-        <img name="figure12" src="Figure/filter_cc_study.png" width="100%" height="100%">
+        <img name="figure14" src="Figure/filter_cc_study.png" width="100%" height="100%">
     </div>
 </div>
 
-<label for="figure11">Figure 13 & 14: Input validation for in-distribution and shifted code samples on the MNP task (left) and on the CC task (right).</label>
+<label for="figure13">Figure 15 & 16: Input validation for in-distribution and shifted code samples on the MNP task (left) and on the CC task (right).</label>
 <br/>
 
 
